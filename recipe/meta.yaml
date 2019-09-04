@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python
-    - netifaces
+    - ifaddr
 
 test:
   imports:
