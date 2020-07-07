@@ -1,6 +1,6 @@
 {% set name = "zeroconf" %}
-{% set version = "0.25.1" %}
-{% set sha256 = "9b6eb9f73410cc06d203ca510f470e23e83affbe1bd65551daea2990b9171f75" %}
+{% set version = "0.26.0" %}
+{% set sha256 = "01161f4328d1b3f089008fd0a394524504c87de5a8017ea286c4f1068aea3c09" %}
 
 package:
   name: {{ name|lower }}
@@ -29,7 +29,7 @@ test:
 
 about:
   home: https://github.com/jstasiak/python-zeroconf
-  license: LGPL-2.1
+  license: LGPL-2.1-only
   license_family: LGPL
   license_file: COPYING
   summary: A pure python implementation of multicast DNS service discovery
