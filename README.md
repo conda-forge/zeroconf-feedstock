@@ -3,9 +3,9 @@ About zeroconf
 
 Home: https://github.com/jstasiak/python-zeroconf
 
-Package license: LGPL-2.1
+Package license: LGPL-2.1-only
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A pure python implementation of multicast DNS service discovery
 
