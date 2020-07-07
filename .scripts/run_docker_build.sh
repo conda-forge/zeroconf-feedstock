@@ -13,6 +13,10 @@ PROVIDER_DIR="$(basename $THISDIR)"
 FEEDSTOCK_ROOT=$(cd "$(dirname "$0")/.."; pwd;)
 RECIPE_ROOT="${FEEDSTOCK_ROOT}/recipe"
 
+if [ -z ${FEEDSTOCK_NAME} ]; then
+    export FEEDSTOCK_NAME=$(basename ${FEEDSTOCK_ROOT})
+fi
+
 docker info
 
 # In order for the conda-build process in the container to write to the mounted
@@ -63,7 +67,6 @@ docker run ${DOCKER_RUN_ARGS} \
            -v "${RECIPE_ROOT}":/home/conda/recipe_root:rw,z \
            -v "${FEEDSTOCK_ROOT}":/home/conda/feedstock_root:rw,z \
            -e CONFIG \
-           -e BINSTAR_TOKEN \
            -e HOST_USER_ID \
            -e UPLOAD_PACKAGES \
            -e GIT_BRANCH \
