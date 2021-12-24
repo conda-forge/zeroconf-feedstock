@@ -1,6 +1,6 @@
 {% set name = "zeroconf" %}
-{% set version = "0.37.0" %}
-{% set sha256 = "f901eda390160bc270aeba95ef2d6aa0a736503301dac393e7d5fd95fa17043a" %}
+{% set version = "0.38.1" %}
+{% set sha256 = "10c501b25d8881b656e56c34674d98fe6bc752240a572e74f918bc849c93ba9c" %}
 
 package:
   name: {{ name|lower }}
