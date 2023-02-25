@@ -21,6 +21,7 @@ requirements:
     - pip
   run:
     - python >=3.11
+    - async-timeout >3.0.0
     - ifaddr >=0.1.7
 
 test:
