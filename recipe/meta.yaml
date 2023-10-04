@@ -1,39 +1,46 @@
 {% set name = "zeroconf" %}
-{% set version = "0.39.3" %}
-{% set sha256 = "829de9ade964f1fdc1e55564a163f82dcc6e124fd858a4ad43cf324a6fb5a937" %}
+{% set version = "0.100.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/zeroconf-{{ version }}.tar.gz
+  sha256: 4568340239f45b45702117f5a93b6db5442343da1eac4440890872a47a53b23f
 
 build:
   noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.11
+    - python <4.0
+    - setuptools >=65.4.1
+    - wheel
+    - cython
+    - poetry-core >=1.5.2
     - pip
   run:
-    - python >=3.11
-    - async-timeout >3.0.0
+    - python >=3.7.0,<4.0.0
+    - async-timeout >=3.0.0
     - ifaddr >=0.1.7
 
 test:
   imports:
     - zeroconf
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
-  home: https://github.com/jstasiak/python-zeroconf
+  home: https://github.com/python-zeroconf/python-zeroconf
+  summary: A pure python implementation of multicast DNS service discovery
   license: LGPL-2.1-only
   license_family: LGPL
   license_file: COPYING
-  summary: A pure python implementation of multicast DNS service discovery
 
 extra:
   recipe-maintainers:
