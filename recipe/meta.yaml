@@ -38,7 +38,8 @@ test:
 about:
   home: https://github.com/python-zeroconf/python-zeroconf
   summary: A pure python implementation of multicast DNS service discovery
-  license: LGPL-2.1
+  license: LGPL-2.1-only
+  license_family: LGPL
   license_file: COPYING
 
 extra:
