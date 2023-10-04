@@ -20,6 +20,7 @@ requirements:
     - python >=3.11
     - pip
     - poetry
+    - six
   run:
     - python >=3.11
     - ifaddr >=0.1.7
