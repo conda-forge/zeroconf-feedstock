@@ -1,5 +1,5 @@
 {% set name = "zeroconf" %}
-{% set version = "0.135.0" %}
+{% set version = "0.136.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/zeroconf-{{ version }}.tar.gz
-  sha256: 9424551ef5a8d91fa8296bb1791e83b31afcd17a336a071928d4a978d7b96b72
+  sha256: 7a82c7bd0327266ef9f04a5272b0bb79812ddcefccf944320b5f3519586bbc82
 
 build:
   noarch: python
