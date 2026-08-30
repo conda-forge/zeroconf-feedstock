@@ -1,13 +1,12 @@
-{% set name = "zeroconf" %}
-{% set version = "1.0.0" %}
+{% set version = "0.151.3" %}
 
 package:
-  name: {{ name|lower }}
+  name: zeroconf
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/zeroconf-{{ version }}.tar.gz
-  sha256: 3834ccf45c1e12cae78707ce691b20969e78aead28ae939b158b7d08c4195ac9
+  url: https://pypi.org/packages/source/z/zeroconf/zeroconf-{{ version }}.tar.gz
+  sha256: ce6c548e665759b6150cef4db9ab9d7bdd89857e90c513abd6b7340bdd7dbd6a
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
