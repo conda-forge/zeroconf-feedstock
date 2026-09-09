@@ -5,12 +5,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/z/zeroconf/zeroconf-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/z/zeroconf/zeroconf-{{ version }}.tar.gz
   sha256: ce6c548e665759b6150cef4db9ab9d7bdd89857e90c513abd6b7340bdd7dbd6a
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
