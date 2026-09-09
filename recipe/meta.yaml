@@ -1,29 +1,27 @@
-{% set name = "zeroconf" %}
-{% set version = "1.0.0" %}
+{% set version = "0.151.3" %}
 
 package:
-  name: {{ name|lower }}
+  name: zeroconf
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/zeroconf-{{ version }}.tar.gz
-  sha256: 3834ccf45c1e12cae78707ce691b20969e78aead28ae939b158b7d08c4195ac9
+  url: https://pypi.org/packages/source/z/zeroconf/zeroconf-{{ version }}.tar.gz
+  sha256: ce6c548e665759b6150cef4db9ab9d7bdd89857e90c513abd6b7340bdd7dbd6a
 
 build:
-  noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python
     - setuptools >=65.4.1
     - wheel
     - cython
     - poetry-core >=1.5.2
     - pip
   run:
-    - python >={{ python_min }},<4.0.0
+    - python
     - async-timeout >=3.0.0
     - ifaddr >=0.1.7
 
@@ -34,7 +32,6 @@ test:
     - pip check
   requires:
     - pip
-    - python {{ python_min }}
 
 about:
   home: https://github.com/python-zeroconf/python-zeroconf
@@ -48,3 +45,4 @@ extra:
     - jjerphan
     - abloemert
     - niecore
+    - pavelzw
