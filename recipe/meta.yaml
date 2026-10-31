@@ -1,4 +1,4 @@
-{% set version = "0.151.5" %}
+{% set version = "0.152.0" %}
 
 package:
   name: zeroconf
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/z/zeroconf/zeroconf-{{ version }}.tar.gz
-  sha256: 28c2ec9d772007eedf11b41a9c9fd3d5c684c17b00721ff8f1ee31b20ad286a1
+  sha256: 8768de190d88124c4f69665c5547f6ae33366024db76007876bbff79cd2509ae
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
